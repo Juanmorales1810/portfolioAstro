@@ -1,12 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ThemeToggle from "../components/ThemeToggle.astro";
+import Hero from "../components/Hero.astro";
+import Skills from "../components/Skills.astro";
 ---
 
 <Layout title="Welcome to Astro." description="No lo se">
     <main>
-        <div
-            class="relative flex flex-col h-[100vh] items-center justify-center bg-gradient-to-r from-violet-200 to-pink-200 dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-900 transition-bg"
+        <section
+            class="relative flex flex-col h-[100vh] items-center justify-center bg-gradient-to-r from-violet-200 to-pink-200 dark:bg-gradient-to-t dark:from-slate-900 dark:to-slate-950 transition-bg"
         >
             <div class="absolute inset-0 overflow-hidden">
                 <div
@@ -14,16 +15,12 @@ import ThemeToggle from "../components/ThemeToggle.astro";
                 >
                 </div>
             </div>
-            <h1
-                class="relative flex items-center text-5xl font-bold text-gray-800 dark:text-white dark:opacity-80 transition-colors"
-            >
-                Juan
-                <span
-                    class="ml-1 rounded-xl bg-current p-2 text-[0.7em] leading-none"
-                >
-                    <span class="text-white dark:text-black">😊</span>
-                </span>
-            </h1>
-        </div>
+            <Hero />
+        </section>
+        <section
+            class="relative flex flex-col justify-center items-center bg-slate-900"
+        >
+            <Skills />
+        </section>
     </main>
 </Layout>
