@@ -1,53 +1,72 @@
 ---
 import LinkedIn from "./icons/LinkedIn.astro";
 import GitHub from "./icons/Github.astro";
+import Arrow from "./icons/Arrow.astro";
 ---
 
 <article
-    class="flex flex-col items-center justify-center gap-10 z-20 w-full max-w-2xl h-60 md:flex-row"
+    class="flex flex-col items-center justify-center gap-10 md:justify-around w-full max-w-5xl h-[100dvh] p-4"
 >
-    <div class="w-1/2 relative md:w-1/3">
-        <img
-            src="/Profile.webp"
-            alt="Profile picture of the author"
-            class="relative w-full z-30 object-cover rounded-full"
-        />
-        <img
-            src="/Profile.webp"
-            alt="Profile picture of the author"
-            class="absolute z-20 top-0 left-0 blur-xl w-full object-cover rounded-full"
-        />
+    <div
+        class="flex flex-col items-center justify-center gap-10 z-20 md:mt-52 w-full max-w-2xl h-auto md:flex-row"
+    >
+        <div class="w-1/2 relative md:w-1/3">
+            <img
+                src="/Profile.webp"
+                alt="Profile picture of the author"
+                class="relative w-full z-30 object-cover rounded-full"
+            />
+            <img
+                src="/Profile.webp"
+                alt="Profile picture of the author"
+                class="absolute z-20 top-0 left-0 blur-xl w-full object-cover rounded-full"
+            />
+        </div>
+        <div class="w-full md:w-2/3">
+            <div>
+                <div
+                    class="flex text-4xl font-bold text-slate-700 dark:text-slate-200"
+                >
+                    <p>Hola</p>
+                    <div
+                        class="animate-wiggle animate-infinite animate-ease-out animate-alternate-reverse origin-bottom-right"
+                    >
+                        👋
+                    </div>
+                </div>
+                <h1
+                    class="text-4xl font-bold bg-gradient-to-br from-blue-600 to-blue-900 bg-clip-text text-transparent dark:from-blue-200 dark:to-blue-400 drop-shadow-[0_0px_7px_rgba(20,165,200,0.55)] pb-4"
+                >
+                    Soy Juan Morales.
+                </h1>
+                <p class="text-lg text-slate-700 dark:text-slate-100 font-bold">
+                    Tengo mas de 3 años de experencia. Soy desarrollador
+                    Fron-End y vivo en Argentina - San Juan. Especializado en
+                    dessarrolo de web apps
+                </p>
+            </div>
+            <div class="flex gap-4 mt-4">
+                <a
+                    href="https://www.linkedin.com/in/juan-morales-3b3b3b3b3/"
+                    target="_blank"
+                    class="flex justify-center items-center gap-1 px-2 py-1 text-lg border-[1px] border-slate-600 rounded-xl text-slate-700 dark:text-slate-100 dark:border-slate-300"
+                >
+                    LinkedIn
+                    <LinkedIn class="w-2 h-2 inline-block" />
+                </a>
+                <a
+                    href="https://www.github.com/juanmorales11"
+                    target="_blank"
+                    class="flex justify-center items-center gap-1 px-2 py-1 text-lg border-[1px] border-slate-600 rounded-xl text-slate-700 dark:text-slate-100 dark:border-slate-300"
+                >
+                    GitHub
+                    <GitHub class="w-2 h-2 inline-block" />
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="w-1/2 md:w-2/3">
-        <div>
-            <h2
-                class="text-4xl font-bold text-slate-700 dark:text-slate-200 pb-4"
-            >
-                Hola 👋, soy Juan Morales.
-            </h2>
-            <p class="text-lg text-slate-700 dark:text-slate-100 font-bold">
-                Tengo mas de 3 años de experencia. Soy desarrollador Fron-End y
-                vivo en Argentina - San Juan. Especializado en dessarrolo de web
-                apps
-            </p>
-        </div>
-        <div class="flex gap-4 mt-4">
-            <a
-                href="https://www.linkedin.com/in/juan-morales-3b3b3b3b3/"
-                target="_blank"
-                class="flex justify-center items-center gap-1 px-2 py-1 text-lg border-[1px] border-slate-600 rounded-xl text-slate-700 dark:text-slate-100 dark:border-slate-300"
-            >
-                LinkedIn
-                <LinkedIn class="w-2 h-2 inline-block" />
-            </a>
-            <a
-                href="https://www.github.com/juanmorales11"
-                target="_blank"
-                class="flex justify-center items-center gap-1 px-2 py-1 text-lg border-[1px] border-slate-600 rounded-xl text-slate-700 dark:text-slate-100 dark:border-slate-300"
-            >
-                GitHub
-                <GitHub class="w-2 h-2 inline-block" />
-            </a>
-        </div>
+
+    <div class="animate-bounce animate-infinite">
+        <Arrow />
     </div>
 </article>
