@@ -1,0 +1,46 @@
+---
+const TAGS = {
+    NEXT: {
+        name: "Next.js",
+        class: "bg-black text-white",
+        // icon: NextJS,
+    },
+    TAILWIND: {
+        name: "Tailwind CSS",
+        class: "bg-[#003159] text-white",
+        // icon: Tailwind,
+    },
+};
+---
+
+<div class="flex justify-center items-center gap-4 w-full max-w-5xl">
+    <article
+        class="flex flex-col justify-between bg-[url('/MockupWebCaribbean.jpg')] bg-cover bg-no-repeat bg-bottom rounded-xl w-full max-w-md h-72 shadow-lg"
+    >
+        <header class="p-2">
+            <h2 class="text-xl font-bold text-white">Caribbean Ind</h2>
+        </header>
+        <footer
+            class="flex justify-between w-full p-2 backdrop-blur bg-slate-950/40"
+        >
+            <div class="flex flex-wrap mt-2">
+                <ul class="flex flex-row mb-2 gap-x-2">
+                    <li>
+                        <span
+                            class="flex gap-x-2 rounded-full bg-black text-xs py-1 px-2"
+                        >
+                            <a class="size-4"></a>
+                            Next.js
+                        </span>
+                    </li>
+                </ul>
+                <a
+                    href="https://www.webcaribbean.com"
+                    class="px-2 py-1 text-white bg-blue-500 rounded-md hover:bg-blue-600"
+                >
+                    Visitar
+                </a>
+            </div>
+        </footer>
+    </article>
+</div>
