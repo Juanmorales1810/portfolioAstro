@@ -1,46 +1,119 @@
 ---
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import HTML from "./icons/HTML.astro";
+import CSS from "./icons/CSS.astro";
+import TypeScript from "./icons/TypeScript.astro";
+
 const TAGS = {
     NEXT: {
         name: "Next.js",
         class: "bg-black text-white",
-        // icon: NextJS,
+        icon: NextJS,
     },
     TAILWIND: {
         name: "Tailwind CSS",
         class: "bg-[#003159] text-white",
-        // icon: Tailwind,
+        icon: Tailwind,
+    },
+    JAVASCRIPT: {
+        name: "JavaScript",
+        class: "bg-yellow-700 text-black",
+        icon: JavaScript,
+    },
+    TypeScript: {
+        name: "TypeScript",
+        class: "bg-blue-700 text-white",
+        icon: TypeScript,
+    },
+    HTML: {
+        name: "HTML",
+        class: "bg-red-700 text-white",
+        icon: HTML,
+    },
+    CSS: {
+        name: "CSS",
+        class: "bg-blue-700 text-white",
+        icon: CSS,
     },
 };
+const PROJECTS = [
+    {
+        title: "Caribbean Ind",
+        description:
+            "Tienda de ropa en línea. Creada con Next.js, React y Tailwind CSS.",
+        link: "https://caribbean-ind.vercel.app/",
+        github: "https://github.com/Juanmorales1810/caribbean-ind/tree/master",
+        image: "/MockupWebCaribbean.jpg",
+        tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.TypeScript],
+    },
+    {
+        title: "Rhinestone Project",
+        description:
+            "Tienda de servicios audiovisuales en línea. Creada con Next.js, React y Tailwind CSS.",
+        link: "https://rhinestone-project.vercel.app/",
+        image: "/MockupWebRP.jpg",
+        tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.TypeScript],
+    },
+    {
+        title: "Ssg Store",
+        description:
+            "Tienda de juegos en línea. Creada con Next.js, React y Tailwind CSS.",
+        link: "https://ssg-new.vercel.app/",
+        image: "/MockupWebSsg.jpg",
+        tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.TypeScript],
+    },
+    {
+        title: "Cuentas Claras",
+        description:
+            "Aplicación web para el control de gastos. Creada con HTML, CSS y JavaScript Vanilla.",
+        link: "https://juanmorales1810.github.io/CuentasClaras/",
+        image: "/MockupWebCC.jpg",
+        tags: [TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS],
+    },
+];
 ---
 
-<div class="flex justify-center items-center gap-4 w-full max-w-5xl">
-    <article
-        class="flex flex-col justify-between bg-[url('/MockupWebCaribbean.jpg')] bg-cover bg-no-repeat bg-bottom rounded-xl w-full max-w-md h-72 shadow-lg"
-    >
-        <header class="p-2">
-            <h2 class="text-xl font-bold text-white">Caribbean Ind</h2>
-        </header>
-        <footer
-            class="flex justify-between w-full p-2 backdrop-blur bg-slate-950/40"
-        >
-            <div class="flex flex-wrap mt-2">
-                <ul class="flex flex-row mb-2 gap-x-2">
-                    <li>
-                        <span
-                            class="flex gap-x-2 rounded-full bg-black text-xs py-1 px-2"
+<div class="flex flex-wrap justify-center items-center gap-4 w-full max-w-5xl">
+    {
+        PROJECTS.map((project) => (
+            <article class="flex flex-col justify-between w-full max-w-md h-auto rounded-xl shadow-lg overflow-hidden">
+                <header class="absolute z-10 p-2">
+                    <h2 class="text-xl font-bold text-white">
+                        {project.title}
+                    </h2>
+                </header>
+                <section>
+                    <img
+                        src={project.image}
+                        alt={project.title}
+                        class="w-full h-72 object-cover hover:scale-105 transition-all duration-300 ease-in-out"
+                    />
+                </section>
+                <footer class="relative z-10 w-full p-2 bg-blue-900">
+                    <div class="flex justify-between items-center flex-wrap mt-2">
+                        <ul class="flex flex-row mb-2 gap-x-2">
+                            {project.tags.map((tag) => (
+                                <li>
+                                    <span
+                                        class={`flex gap-x-2 rounded-full ${tag.class} text-xs py-1 px-2`}
+                                    >
+                                        <tag.icon class="size-4" />
+                                        {tag.name}
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+                        <a
+                            href={project.link}
+                            class="px-2 py-1 text-white bg-blue-500 rounded-md hover:bg-blue-600"
                         >
-                            <a class="size-4"></a>
-                            Next.js
-                        </span>
-                    </li>
-                </ul>
-                <a
-                    href="https://www.webcaribbean.com"
-                    class="px-2 py-1 text-white bg-blue-500 rounded-md hover:bg-blue-600"
-                >
-                    Visitar
-                </a>
-            </div>
-        </footer>
-    </article>
+                            Visitar
+                        </a>
+                    </div>
+                </footer>
+            </article>
+        ))
+    }
 </div>
