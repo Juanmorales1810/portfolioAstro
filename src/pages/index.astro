@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Proyectos from "../components/Proyectos.astro";
 import Experience from "../components/Experience.astro";
+import SobreMi from "../components/SobreMi.astro";
 ---
 
 <Layout title="Welcome to Astro." description="No lo se">
@@ -31,6 +32,13 @@ import Experience from "../components/Experience.astro";
             data-section="proyectos"
         >
             <Proyectos />
+        </section>
+        <section
+            class="flex justify-center items-center bg-violet-100 dark:bg-gray-950 py-10 px-2"
+            id="sobre-mi"
+            data-section="sobre-mi"
+        >
+            <SobreMi />
         </section>
     </main>
 </Layout>
