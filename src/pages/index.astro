@@ -9,7 +9,7 @@ import SobreMi from "../components/SobreMi.astro";
 <Layout title="Welcome to Astro." description="No lo se">
     <main>
         <section
-            class="relative flex flex-col h-[100dvh] items-center justify-center bg-gradient-to-t from-violet-100 to-pink-200 dark:bg-gradient-to-t dark:from-gray-950 dark:to-slate-950 transition-bg"
+            class="relative flex flex-col h-[100vh] items-center justify-center bg-gradient-to-t from-violet-100 to-pink-200 dark:bg-gradient-to-t dark:from-gray-950 dark:to-slate-950 transition-bg"
         >
             <div class="absolute inset-0 overflow-hidden">
                 <div
@@ -20,24 +20,27 @@ import SobreMi from "../components/SobreMi.astro";
             <Hero />
         </section>
         <section
-            class="flex flex-col justify-center items-center bg-violet-100 dark:bg-gray-950 py-10 px-2"
+            class="flex flex-col justify-center items-center bg-violet-100 dark:bg-gray-950 py-10 px-4"
             id="experiencia"
             data-section="experiencia"
         >
+            <h2 class="pb-4 text-4xl text-violet-400">Experiencia</h2>
             <Experience />
         </section>
         <section
-            class="flex justify-center items-center bg-violet-100 dark:bg-gray-950 py-10 px-2"
+            class="flex flex-col justify-center items-center bg-violet-100 dark:bg-gray-950 py-10 px-2"
             id="proyectos"
             data-section="proyectos"
         >
+            <h2 class="pb-4 text-4xl text-violet-300">Proyectos</h2>
             <Proyectos />
         </section>
         <section
-            class="flex justify-center items-center bg-violet-100 dark:bg-gray-950 py-10 px-2"
+            class="flex flex-col justify-center items-center bg-violet-100 dark:bg-gray-950 py-10 px-2"
             id="sobre-mi"
             data-section="sobre-mi"
         >
+            <h2 class="pb-4 text-4xl text-violet-300">Sobre mi</h2>
             <SobreMi />
         </section>
     </main>
