@@ -17,6 +17,29 @@ import Nav from "../components/Navbar.astro";
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
+        <!-- Facebook Meta Tags -->
+        <meta
+            property="og:url"
+            content="https://portfolio-astro-tan.vercel.app/"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="/Metadata.jpg" />
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            property="twitter:domain"
+            content="https://portfolio-astro-tan.vercel.app/"
+        />
+        <meta
+            property="twitter:url"
+            content="https://portfolio-astro-tan.vercel.app/"
+        />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content="/Metadata.jpg" />
     </head>
     <body class="bg-violet-100 dark:bg-blue-950">
         <Nav />
