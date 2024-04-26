@@ -6,6 +6,7 @@ interface Props {
 
 const { description, title } = Astro.props;
 import "../../style/base.css";
+import Footer from "../components/Footer.astro";
 import Nav from "../components/Navbar.astro";
 ---
 
@@ -47,9 +48,10 @@ import Nav from "../components/Navbar.astro";
             content="https://portfolio-astro-tan.vercel.app/Metadata.jpg"
         />
     </head>
-    <body class="bg-violet-100 dark:bg-blue-950">
+    <body class="bg-violet-100 dark:bg-gray-950">
         <Nav />
         <slot />
+        <Footer />
     </body>
 </html>
 <style is:global>
